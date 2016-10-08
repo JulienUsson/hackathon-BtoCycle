@@ -8,6 +8,9 @@ module('hackathonApp').
     controllerAs: 'spCtrl'
   });
 
-function spController() {
+function spController($state, $timeout) {
   var vm = this;
+  $timeout(function() {
+    $state.go('home');
+  }, 1000);
 }
