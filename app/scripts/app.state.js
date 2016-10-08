@@ -1,7 +1,14 @@
 angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvider) {
+
+  var splashScreenState = {
+    name: 'splashScreen',
+    url: '/',
+    template: '<splash-screen></splash-screen>'
+  }
+
   var homeState = {
     name: 'home',
-    url: '/',
+    url: '/home',
     template: '<home></home>'
   }
 
@@ -29,6 +36,7 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
     template: '<book></book>'
   }
 
+  $stateProvider.state(splashScreenState);
   $stateProvider.state(homeState);
   $stateProvider.state(mapsState);
   $stateProvider.state(scoreState);
