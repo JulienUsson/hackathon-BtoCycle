@@ -2,7 +2,7 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
   var homeState = {
     name: 'home',
     url: '/',
-    template: '<div>coucou</div>'
+    template: '<home></home>'
   }
 
   var mapsState = {
