@@ -12,9 +12,11 @@
   </md-card-title>
   <md-card-content>
     <md-list>
-      <score-list-item label="'Nombre de km parcourus'" score="scoreCtrl.kms" img="'images/icons/bicycle.svg'"></score-list-item>
+      <score-list-item label="'Score'" score="scoreCtrl.kms * 1000" unit="'pts'" img="'images/icons/bicycle.svg'"></score-list-item>
       <md-divider></md-divider>
-      <score-list-item label="'Nombre de km parcourus aujourd\'hui'" score="scoreCtrl.todayKms" img="'images/icons/bicycle.svg'"></score-list-item>
+      <score-list-item label="'Nombre de km parcourus'" score="scoreCtrl.kms" unit="'km'" img="'images/icons/bicycle.svg'"></score-list-item>
+      <md-divider></md-divider>
+      <score-list-item label="'Nombre de km parcourus aujourd\'hui'" score="scoreCtrl.todayKms" unit="'km'" img="'images/icons/bicycle.svg'"></score-list-item>
   </md-card-content>
 </md-card>
 

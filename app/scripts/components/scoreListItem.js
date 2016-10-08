@@ -9,7 +9,8 @@ module('hackathonApp').
     bindings: {
       'img': '=',
       'label': '=',
-      'score': '='
+      'score': '=',
+      'unit': '='
     }
   });
 
