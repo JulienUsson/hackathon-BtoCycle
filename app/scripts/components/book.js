@@ -11,9 +11,12 @@ module('hackathonApp').
 function bookController($mdToast) {
   var vm = this;
   vm.validated = false;
+  vm.minDate = new Date();
 
   vm.reservations = [];
-  vm.reservations.push({date: '09/10/2016', time: '10:00'})
+  var tmpDate = new Date();
+
+  vm.reservations.push({date: new Date(2016, 08, 16), time: new Date(2016, 08, 16, 10, 10)})
 
   vm.book = function() {
     vm.validated = true;

@@ -9,7 +9,7 @@
         <form name="bookForm">
           <div layout="row">
             <div flex="50" style="padding: 15px 0;" >
-              <md-datepicker name="dateField" md-min-date="minDate" ng-model="bookCtrl.date" required></md-datepicker>
+              <md-datepicker name="dateField" md-min-date="bookCtrl.minDate" ng-model="bookCtrl.date" required></md-datepicker>
             </div>
             <div flex="50">
               <mdp-time-picker name="timeField" ng-model="bookCtrl.time" required></mdp-time-picker>
@@ -39,14 +39,14 @@
 <md-card ng-if="bookCtrl.reservations.length > 0">
   <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">
     <md-card-title-text>
-      <span class="md-headline">Mes réservation</span>
+      <span class="md-headline">Mes réservations</span>
     </md-card-title-text>
   </md-card-title>
   <md-card-content>
     <md-list flex>
       <md-list-item ng-repeat="reservation in bookCtrl.reservations">
         <div class="md-list-item-text md-offset">
-          {{reservation.date}} {{reservation.time}}
+          {{reservation.date | date:'dd/MM/yyyy'}} {{reservation.time | date:'HH:mm'}}
         </div>
         <span flex></span>
         <md-button ng-click="bookCtrl.removeReservation($index)" class="md-warn md-hue-2 md-raised md-icon-button">
