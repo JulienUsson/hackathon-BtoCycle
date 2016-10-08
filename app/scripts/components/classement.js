@@ -16,9 +16,9 @@ function classementController() {
   vm.users = [];
   for (var i = 0; i < 200; i++) {
     if(i == 8) {
-     this.users.push({name: "Mathilde Dupont", service: 'DGSI/MV', index: i, score: 1000 - i*33});
+     this.users.push({name: "Mathilde Dupont", service: 'DGSI', index: i, score: 1000 - i*33});
     } else {
-     this.users.push({name: "John Do", service: 'DGSI/MV', index: i, score: 1000 - i*33});
+     this.users.push({name: "John Do", service: 'DGSI', index: i, score: 1000 - i*33});
     }
   }
 
