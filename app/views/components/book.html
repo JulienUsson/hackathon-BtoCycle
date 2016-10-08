@@ -17,8 +17,29 @@
       </p>
     </div>
     <md-card-actions layout="row" layout-align="end center">
-      <md-button class="md-raised">Annuler</md-button>
-      <md-button class="md-raised md-primary">Réserver !</md-button>
+      <md-button class="md-raised" ng-click="bookCtrl.cancel()">Annuler</md-button>
+      <md-button class="md-raised md-primary" ng-click="bookCtrl.book()">Réserver !</md-button>
     </md-card-actions>
+  </md-card-content>
+</md-card>
+
+<md-card ng-if="bookCtrl.reservations.length > 0">
+  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">
+    <md-card-title-text>
+      <span class="md-headline">Mes réservation</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <md-list flex>
+      <md-list-item ng-repeat="reservation in bookCtrl.reservations">
+        <div class="md-list-item-text md-offset">
+          {{reservation.date}} {{reservation.time}}
+        </div>
+        <span flex></span>
+        <md-button ng-click="bookCtrl.removeReservation($index)" class="md-warn md-hue-2 md-raised md-icon-button">
+          <md-icon md-svg-icon="images/icons/ic_close_24px.svg"></md-icon>
+        </md-button>
+      </md-list-item>
+    </md-list>
   </md-card-content>
 </md-card>
