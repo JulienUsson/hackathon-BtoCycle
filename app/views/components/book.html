@@ -6,16 +6,29 @@
   </md-card-title>
   <md-card-content>
       <p>
-        <div layout="row">
-          <div flex="50" style="padding: 15px 0;" >
-            <md-datepicker ng-model="bookCtrl.date" md-placeholder="date"></md-datepicker>
+        <form name="bookForm">
+          <div layout="row">
+            <div flex="50" style="padding: 15px 0;" >
+              <md-datepicker name="dateField" md-min-date="minDate" ng-model="bookCtrl.date" required></md-datepicker>
+            </div>
+            <div flex="50">
+              <mdp-time-picker name="timeField" ng-model="bookCtrl.time" required></mdp-time-picker>
+            </div>
           </div>
-          <div flex="50">
-            <mdp-time-picker ng-model="bookCtrl.time" mdp-placeholder="heure" mdp-format="HH:mm A"></mdp-time-picker>
+          <div layout="row">
+            <div flex="50">
+              <div class="validation-messages" ng-if="bookCtrl.validated" ng-messages="bookForm.dateField.$error">
+                <div ng-message="required">La date est obligatoire !</div>
+              </div>
+            </div>
+            <div flex="50">
+              <div class="validation-messages" ng-if="bookCtrl.validated" ng-messages="bookForm.timeField.$error">
+                <div ng-message="required">L'heure est obligatoire !</div>
+              </div>
+            </div>
           </div>
-        </div>
+        </form>
       </p>
-    </div>
     <md-card-actions layout="row" layout-align="end center">
       <md-button class="md-raised" ng-click="bookCtrl.cancel()">Annuler</md-button>
       <md-button class="md-raised md-primary" ng-click="bookCtrl.book()">Réserver !</md-button>

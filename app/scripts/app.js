@@ -12,6 +12,7 @@ angular
   .module('hackathonApp', [
     'ngAnimate',
     'ngCookies',
+    'ngMessages',
     'ngResource',
     'ngSanitize',
     'uiGmapgoogle-maps',
