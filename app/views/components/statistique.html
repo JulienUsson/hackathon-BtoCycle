@@ -1,0 +1,40 @@
+<md-card >
+  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">
+    <md-card-title-media>
+      <div class="md-media-sm card-media  margin-right" layout>
+        <img src="{{statistiqueCtrl.avatar}}" class="img-circle"/>
+      </div>
+    </md-card-title-media>
+    <md-card-title-text>
+        <span class="md-headline">{{statistiqueCtrl.username}}</span>
+        <span class="md-subhead description">{{statistiqueCtrl.company}}</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <md-list>
+      <score-list-item label="'Score'" score="statistiqueCtrl.kms * 1000" unit="'pts'" img="'images/icons/bicycle.svg'"></score-list-item>
+      <md-divider></md-divider>
+      <score-list-item label="'Nombre de km parcourus'" score="statistiqueCtrl.kms" unit="'km'" img="'images/icons/bicycle.svg'"></score-list-item>
+      <md-divider></md-divider>
+      <score-list-item label="'Nombre de km parcourus aujourd\'hui'" score="statistiqueCtrl.todayKms" unit="'km'" img="'images/icons/bicycle.svg'"></score-list-item>
+  </md-card-content>
+</md-card>
+
+<md-card >
+  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">Objectif du mois</md-card-title>
+  <md-card-content>
+    <canvas id="doughnut" class="chart chart-doughnut"
+      chart-data="statistiqueCtrl.objectif.data" chart-labels="statistiqueCtrl.objectif.labels" chart-colors="statistiqueCtrl.objectif.colors">
+    </canvas>
+    <div><span class="score">{{statistiqueCtrl.objectif.data[0]}}%</span> de l'objectif atteint !</div>
+  </md-card-content>
+</md-card>
+
+<md-card >
+  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">Performance sur la semaine</md-card-title>
+  <md-card-content>
+    <canvas id="bar" style="padding-top: 20px;" class="chart chart-bar"
+      chart-data="statistiqueCtrl.performance.data" chart-labels="statistiqueCtrl.performance.labels" chart-series="statistiqueCtrl.performance.series">
+    </canvas
+  </md-card-content>
+</md-card>
