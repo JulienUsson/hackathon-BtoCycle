@@ -12,3 +12,10 @@
 .padding-left-10 {
   padding-left: 10px;
 }
+
+.map-search {
+  position: absolute;;
+  z-index: 100;
+  width: 90%;
+  margin-left: 5%;
+}

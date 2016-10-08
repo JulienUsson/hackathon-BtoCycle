@@ -1,16 +1,18 @@
-<md-card>
-  <md-autocomplete
-          md-search-text="mapsCtrl.searchText"
-          md-items="item in mapsCtrl.querySearch()"
-          md-item-text="item.title"
-          md-selected-item-change="mapsCtrl.selectedItemChange(item)"
-          md-min-length="0"
-          placeholder="Station">
-    <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.title}}</span>
-  </md-autocomplete>
-</md-card>
-<ui-gmap-google-map center='mapsCtrl.center' zoom='mapsCtrl.zoom'>
-  <div ng-repeat="marker in mapsCtrl.markers">
-    <ui-gmap-marker idKey='marker.id' coords='marker.coords' click="mapsCtrl.showAlert($event, marker)" options="marker.options" ></ui-gmap-marker>
-  </div>
-</ui-gmap-google-map>
+<div>
+  <md-card class="map-search">
+    <md-autocomplete
+            md-search-text="mapsCtrl.searchText"
+            md-items="item in mapsCtrl.querySearch()"
+            md-item-text="item.title"
+            md-selected-item-change="mapsCtrl.selectedItemChange(item)"
+            md-min-length="0"
+            placeholder="Station">
+      <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.title}}</span>
+    </md-autocomplete>
+  </md-card>
+  <ui-gmap-google-map center='mapsCtrl.center' zoom='mapsCtrl.zoom' options="mapsCtrl.options">
+    <div ng-repeat="marker in mapsCtrl.markers">
+      <ui-gmap-marker idKey='marker.id' coords='marker.coords' click="mapsCtrl.showAlert($event, marker)" options="marker.options" ></ui-gmap-marker>
+    </div>
+  </ui-gmap-google-map>
+</div>
