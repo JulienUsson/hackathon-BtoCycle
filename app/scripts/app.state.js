@@ -11,7 +11,14 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
     template: '<maps></maps>'
   }
 
+  var scoreState = {
+    name: 'score',
+    url: '/score',
+    template: '<score></score>'
+  }
+
   $stateProvider.state(homeState);
   $stateProvider.state(mapsState);
+  $stateProvider.state(scoreState);
   $urlRouterProvider.otherwise('/');
 });
