@@ -64,6 +64,8 @@ function mapsController($mdDialog) {
   }
 
   vm.selectedItemChange = function(item) {
-    vm.center = {'latitude': item.coords.latitude, 'longitude': item.coords.longitude};
+    if(item !== undefined) {
+      vm.center = {'latitude': item.coords.latitude, 'longitude': item.coords.longitude};
+    }
   }
 }
