@@ -11,4 +11,10 @@ module('hackathonApp').
 function scoreController() {
   var vm = this;
 
+  vm.username = 'Mathilde Dupont';
+  vm.company = 'Sopra Steria';
+  vm.avatar = 'images/components/score/avatar.png';
+
+  vm.todayKms = 0.5;
+  vm.kms = 5.5;
 }

@@ -1,0 +1,18 @@
+.img-circle {
+  border-radius: 50%;
+}
+
+.margin-right {
+  margin-right: 15px;
+}
+
+.icon {
+  height: 45px;
+  padding-right: 10px;
+}
+
+.score {
+  font-weight: bold;
+  font-size: 26px;
+  padding-right: 5px;
+}

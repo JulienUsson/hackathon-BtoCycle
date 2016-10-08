@@ -1,1 +1,19 @@
-<user-card name="User name"></user-card>
+<md-card >
+  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">
+    <md-card-title-media>
+      <div class="md-media-sm card-media  margin-right" layout>
+        <img src="{{scoreCtrl.avatar}}" class="img-circle"/>
+      </div>
+    </md-card-title-media>
+    <md-card-title-text>
+        <span class="md-headline">{{scoreCtrl.username}}</span>
+        <span class="md-subhead description">{{scoreCtrl.company}}</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <md-list>
+      <score-list-item label="'Nombre de km parcourus'" score="scoreCtrl.kms" img="'images/icons/bicycle.svg'"></score-list-item>
+      <md-divider></md-divider>
+      <score-list-item label="'Nombre de km parcourus aujourd\'hui'" score="scoreCtrl.todayKms" img="'images/icons/bicycle.svg'"></score-list-item>
+  </md-card-content>
+</md-card>

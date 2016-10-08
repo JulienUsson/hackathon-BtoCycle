@@ -1,6 +1,6 @@
 <md-dialog aria-label="{{marker.title}}">
   <form ng-cloak>
-    <md-toolbar>
+    <md-toolbar md-colors="::{backgroundColor: 'default-primary-700'}">
       <div class="md-toolbar-tools">
         <h2>{{marker.title}}</h2>
         <span flex></span>
@@ -12,14 +12,14 @@
 
     <md-dialog-content>
       <md-list flex>
-        <md-list-item class="md-3-line">
+        <md-list-item>
           <img ng-src="/images/components/maps/green_cycle.png" class="md-avatar" />
           <div class="md-list-item-text" layout="column">
             Vélos disponibles: {{marker.available}}/{{marker.nbPlaces}}
           </div>
         </md-list-item>
         <md-divider ></md-divider>
-        <md-list-item class="md-3-line">
+        <md-list-item>
           <img src="/images/components/maps/green_cycle.png" class="md-avatar"/>
           <div class="md-list-item-text" layout="column">
             Places de parking disponibles: {{marker.nbPlaces - marker.available}}/{{marker.nbPlaces}}

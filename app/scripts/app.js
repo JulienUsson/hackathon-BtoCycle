@@ -26,3 +26,9 @@ angular.module('hackathonApp').config(
       });
   }]
 );
+
+angular.module('hackathonApp').config(function ($mdThemingProvider, $mdIconProvider) {
+    $mdThemingProvider.theme('default')
+      .primaryPalette('green')
+      .accentPalette('yellow');
+});
