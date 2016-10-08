@@ -3,37 +3,79 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
   var splashScreenState = {
     name: 'splashScreen',
     url: '/',
-    template: '<splash-screen></splash-screen>'
+    views: {
+      'header': {
+        template: ''
+      },
+      'container': {
+        template: '<splash-screen></splash-screen>'
+      }
+    }
   }
 
   var homeState = {
     name: 'home',
     url: '/home',
-    template: '<home></home>'
+    views: {
+      'header': {
+        template: '<app-menu></app-menu>'
+      },
+      'container': {
+        template: '<home></home>'
+      }
+    }
   }
 
   var mapsState = {
     name: 'maps',
     url: '/maps',
-    template: '<maps></maps>'
+    views: {
+      'header': {
+        template: '<app-menu></app-menu>'
+      },
+      'container': {
+        template: '<maps></maps>'
+      }
+    }
   }
 
   var scoreState = {
     name: 'score',
     url: '/score',
-    template: '<score></score>'
+    views: {
+      'header': {
+        template: '<app-menu></app-menu>'
+      },
+      'container': {
+        template: '<score></score>'
+      }
+    }
   }
 
   var unlockState = {
     name: 'unlock',
     url: '/unlock',
-    template: '<unlock></unlock>'
+    views: {
+      'header': {
+        template: '<app-menu></app-menu>'
+      },
+      'container': {
+        template: '<unlock></unlock>'
+      }
+    }
   }
 
   var bookState = {
     name: 'book',
     url: '/book',
-    template: '<book></book>'
+    views: {
+      'header': {
+        template: '<app-menu></app-menu>'
+      },
+      'container': {
+        template: '<book></book>'
+      }
+    }
   }
 
   $stateProvider.state(splashScreenState);
