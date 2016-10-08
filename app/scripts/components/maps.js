@@ -8,7 +8,7 @@ angular.
       controllerAs: 'mapsCtrl'
     });
 
-function mapsController() {
+function mapsController($mdDialog) {
   var vm = this;
 
   //sopra location
@@ -16,16 +16,38 @@ function mapsController() {
   vm.zoom = 18;
 
   vm.markers= [];
-  vm.markers.push(createMarker(1, 45.760351, 3.134832, true));
-  vm.markers.push(createMarker(1, 45.760328, 3.135598, false));
+  vm.markers.push(createMarker(1, "sopra", 45.760351, 3.134832, 4, 5));
+  vm.markers.push(createMarker(1, "test", 45.760328, 3.135598, 0, 5));
 
-  function createMarker(id, latitude, longitude, available) {
+  vm.showAlert = function(event, marker) {
+    vm.selectedMarker = marker;
+    $mdDialog.show({
+      controller: MapsModalController,
+      templateUrl: 'views/components/modal.html',
+      parent: angular.element(document.body),
+      targetEvent: event,
+      clickOutsideToClose:true
+    })
+  }
+
+  function createMarker(id, title, latitude, longitude, available, nbPlaces) {
     return {
       'id': id,
+      'title': title,
+      'available': available,
+      'nbPlaces': nbPlaces,
       'coords': { 'latitude': latitude, 'longitude': longitude },
       'options': {
-        'icon': (available)?'/images/components/maps/green_cycle.png':'/images/components/maps/red_parking.png'
+        'icon': (available > 0) ? '/images/components/maps/green_cycle.png' : '/images/components/maps/red_parking.png'
       }
+    };
+  }
+
+  function MapsModalController($scope, $mdDialog) {
+    $scope.marker=vm.selectedMarker;
+
+    $scope.cancel = function() {
+      $mdDialog.cancel();
     };
   }
 }

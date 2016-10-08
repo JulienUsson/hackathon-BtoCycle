@@ -14,8 +14,8 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngTouch',
-    'uiGmapgoogle-maps'
+    'uiGmapgoogle-maps',
+    'ngMaterial'
   ]);
 
 angular.module('hackathonApp').config(

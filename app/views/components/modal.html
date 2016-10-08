@@ -1,0 +1,29 @@
+<md-dialog aria-label="{{marker.title}}">
+  <form ng-cloak>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{marker.title}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="/images/components/maps/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+      <md-list flex>
+        <md-list-item class="md-3-line">
+          <img ng-src="/images/components/maps/green_cycle.png" class="md-avatar" />
+          <div class="md-list-item-text" layout="column">
+            Vélos disponibles: {{marker.available}}/{{marker.nbPlaces}}
+          </div>
+        </md-list-item>
+        <md-divider ></md-divider>
+        <md-list-item class="md-3-line">
+          <img src="/images/components/maps/green_cycle.png" class="md-avatar"/>
+          <div class="md-list-item-text" layout="column">
+            Places de parking disponibles: {{marker.nbPlaces - marker.available}}/{{marker.nbPlaces}}
+          </div>
+        </md-list-item>
+    </md-dialog-content>
+</md-dialog>

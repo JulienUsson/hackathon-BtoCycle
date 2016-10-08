@@ -1,6 +1,6 @@
 <ui-gmap-google-map center='mapsCtrl.center' zoom='mapsCtrl.zoom'>
 
   <div ng-repeat="marker in mapsCtrl.markers">
-    <ui-gmap-marker idKey='marker.id' coords='marker.coords' options="marker.options"></ui-gmap-marker>
+    <ui-gmap-marker idKey='marker.id' coords='marker.coords' click="mapsCtrl.showAlert($event, marker)" options="marker.options" ></ui-gmap-marker>
   </div>
 </ui-gmap-google-map>
