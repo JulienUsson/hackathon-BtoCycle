@@ -10,10 +10,9 @@ module('hackathonApp').
 
 function menuController($state) {
   var vm = this;
+  vm.show=($state.current.name == 'home') ? false : true;
 
   vm.return = function() {
     $state.go('home');
   }
-
-  console.log($state.current);
 }
