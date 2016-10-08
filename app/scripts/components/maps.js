@@ -31,6 +31,11 @@ function mapsController($mdDialog) {
   }
 
   function createMarker(id, title, latitude, longitude, available, nbPlaces) {
+    var icon = 'images/components/maps/';
+    icon += (available > 0)?'green_':'red_';
+    icon += (available == nbPlaces)?'red':'green';
+    icon += '.png';
+
     return {
       'id': id,
       'title': title,
@@ -38,7 +43,7 @@ function mapsController($mdDialog) {
       'nbPlaces': nbPlaces,
       'coords': { 'latitude': latitude, 'longitude': longitude },
       'options': {
-        'icon': (available > 0) ? '/images/components/maps/green_cycle.png' : '/images/components/maps/red_parking.png'
+        'icon': icon
       }
     };
   }
