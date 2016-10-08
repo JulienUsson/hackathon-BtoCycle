@@ -16,7 +16,8 @@ angular
     'ngSanitize',
     'uiGmapgoogle-maps',
     'ngMaterial',
-    'ui.router'
+    'ui.router',
+    'chart.js'
   ]);
 
 angular.module('hackathonApp').config(

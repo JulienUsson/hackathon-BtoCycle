@@ -17,3 +17,22 @@
       <score-list-item label="'Nombre de km parcourus aujourd\'hui'" score="scoreCtrl.todayKms" img="'images/icons/bicycle.svg'"></score-list-item>
   </md-card-content>
 </md-card>
+
+<md-card >
+  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">Objectif du mois</md-card-title>
+  <md-card-content>
+    <canvas id="doughnut" class="chart chart-doughnut"
+      chart-data="scoreCtrl.objectif.data" chart-labels="scoreCtrl.objectif.labels" chart-colors="scoreCtrl.objectif.colors">
+    </canvas>
+    <div><span class="score">{{scoreCtrl.objectif.data[0]}}%</span> de l'objectif atteint !</div>
+  </md-card-content>
+</md-card>
+
+<md-card >
+  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">Performance sur la semaine</md-card-title>
+  <md-card-content>
+    <canvas id="bar" style="padding-top: 20px;" class="chart chart-bar"
+      chart-data="scoreCtrl.performance.data" chart-labels="scoreCtrl.performance.labels" chart-series="scoreCtrl.performance.series">
+    </canvas
+  </md-card-content>
+</md-card>
