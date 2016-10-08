@@ -2,7 +2,7 @@
    <md-virtual-repeat-container id="vertical-container" md-top-index="classementCtrl.topIndex">
      <div md-virtual-repeat="user in classementCtrl.users" class="repeated-item" ng-class="{}" flex>
       <div class="alignleft" style="padding-right: 25px;width: 20px;">{{user.index + 1}}</div>
-      <div class="alignleft">{{user.name}}</div>
+      <div class="alignleft">{{user.name}} ({{user.service}})</div>
       <div class="alignright"><span class="score">{{user.score}}</span></div>
      </div>
    </md-virtual-repeat-container>
