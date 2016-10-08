@@ -17,7 +17,8 @@ angular
     'uiGmapgoogle-maps',
     'ngMaterial',
     'ui.router',
-    'chart.js'
+    'chart.js',
+    'mdPickers'
   ]);
 
 angular.module('hackathonApp').config(

@@ -1,1 +1,24 @@
-book
+<md-card>
+  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">
+    <md-card-title-text>
+      <span class="md-headline">Réservation</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+      <p>
+        <div layout="row">
+          <div flex="50" style="padding: 15px 0;" >
+            <md-datepicker ng-model="bookCtrl.date" md-placeholder="date"></md-datepicker>
+          </div>
+          <div flex="50">
+            <mdp-time-picker ng-model="bookCtrl.time" mdp-placeholder="heure" mdp-format="HH:mm A"></mdp-time-picker>
+          </div>
+        </div>
+      </p>
+    </div>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button class="md-raised">Annuler</md-button>
+      <md-button class="md-raised md-primary">Réserver !</md-button>
+    </md-card-actions>
+  </md-card-content>
+</md-card>
