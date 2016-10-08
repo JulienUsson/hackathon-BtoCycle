@@ -13,16 +13,16 @@
     <md-dialog-content>
       <md-list flex>
         <md-list-item>
-          <img ng-src="/images/components/maps/green_cycle.png" class="md-avatar" />
+          <img ng-src="/images/components/maps/bicycle.svg" class="icon-maps" />
           <div class="md-list-item-text" layout="column">
-            Vélos disponibles: {{marker.available}}/{{marker.nbPlaces}}
+            Vélos disponibles: <span class="md-secondary padding-left-10">{{marker.available}}/{{marker.nbPlaces}}</span>
           </div>
         </md-list-item>
         <md-divider ></md-divider>
         <md-list-item>
-          <img src="/images/components/maps/green_cycle.png" class="md-avatar"/>
+          <img src="/images/components/maps/parking.svg" class="icon-maps"/>
           <div class="md-list-item-text" layout="column">
-            Places de parking disponibles: {{marker.nbPlaces - marker.available}}/{{marker.nbPlaces}}
+            Places de parking disponibles: <span class="md-secondary padding-left-10">{{marker.nbPlaces - marker.available}}/{{marker.nbPlaces}}</span>
           </div>
         </md-list-item>
     </md-dialog-content>

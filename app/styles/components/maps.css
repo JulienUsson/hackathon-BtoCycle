@@ -3,3 +3,12 @@
   width: 100%;
   position: absolute;
 }
+
+.icon-maps {
+  height: 30px;
+  padding-right: 15px;
+}
+
+.padding-left-10 {
+  padding-left: 10px;
+}
