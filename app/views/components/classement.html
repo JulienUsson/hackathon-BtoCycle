@@ -1,1 +1,7 @@
-coucou
+<md-content layout="column" class="classement">
+   <md-virtual-repeat-container id="vertical-container" md-top-index="classementCtrl.topIndex">
+     <div md-virtual-repeat="user in classementCtrl.users" class="repeated-item" ng-class="{}" flex>
+         {{user.index + 1}} {{user.name}} <span class="score">{{user.score}}</span>
+     </div>
+   </md-virtual-repeat-container>
+ </md-content>

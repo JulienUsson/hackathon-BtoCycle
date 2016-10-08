@@ -16,3 +16,27 @@
   font-size: 26px;
   padding-right: 5px;
 }
+
+/*classement*/
+
+
+
+.classement #vertical-container {
+  height: 700px;
+  width: 100%;
+}
+
+.classement .repeated-item {
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.classement md-content {
+  margin: 16px;
+}
+
+.classement .md-virtual-repeat-container .md-virtual-repeat-offsetter div {
+  padding-left: 16px;
+}
