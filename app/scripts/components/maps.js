@@ -13,7 +13,7 @@ function mapsController($mdDialog) {
 
   //sopra location
   vm.center = { latitude: 45.760351, longitude: 3.134832 };
-  vm.zoom = 18;
+  vm.zoom = 18
 
   vm.markers= [];
   vm.markers.push(createMarker(1, "sopra", 45.760351, 3.134832, 4, 5));
@@ -54,5 +54,15 @@ function mapsController($mdDialog) {
     $scope.cancel = function() {
       $mdDialog.cancel();
     };
+  }
+
+  vm.querySearch = function() {
+    return vm.markers.filter(function(marker) {
+      return marker.title.toLowerCase().startsWith(vm.searchText.toLowerCase());
+    });
+  }
+
+  vm.selectedItemChange = function(item) {
+    vm.center = {'latitude': item.coords.latitude, 'longitude': item.coords.longitude};
   }
 }
