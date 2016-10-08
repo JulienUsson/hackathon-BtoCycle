@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngSanitize',
     'uiGmapgoogle-maps',
-    'ngMaterial'
+    'ngMaterial',
+    'ui.router'
   ]);
 
 angular.module('hackathonApp').config(
