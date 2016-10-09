@@ -14,7 +14,7 @@ function homeController() {
   vm.company = 'Sopra Steria';
   vm.avatar = 'images/components/score/avatar.png';
   vm.kms = 5.5;
-
-
+  vm.objectif = 25;
+  vm.score=500;
 
 }

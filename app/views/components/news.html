@@ -1,1 +1,17 @@
-news
+<md-card ng-repeat="new in newsCtrl.news">
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">{{new.title}}</span>
+    </md-card-title-text>
+  </md-card-title>
+  <md-card-content>
+    <p>
+    {{new.content}}
+    </p>
+  </md-card-content>
+  <md-card-actions layout="row" layout-align="end center">
+    <md-button ng-click="newsCtrl.like($index)" class="md-icon-button" aria-label="Favorite">
+      <md-icon ng-class="{liked: new.liked}" md-svg-icon="images/icons/favorite.svg"></md-icon>
+    </md-button>
+  </md-card-actions>
+</md-card>
