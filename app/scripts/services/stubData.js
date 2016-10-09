@@ -6,7 +6,8 @@ angular.module('hackathonApp').factory('stubData', function() {
     'getMarkers': getMarkers,
     'getNews': getNews,
     'getObjectifChart': getObjectifChart,
-    'getPerformanceChart': getPerformanceChart
+    'getPerformanceChart': getPerformanceChart,
+    'getReservations': getReservations
   }
   return service;
 
@@ -63,6 +64,10 @@ angular.module('hackathonApp').factory('stubData', function() {
       [0.5, 0.7, 0.9, 0.7, 0.6, 0.5, 0.4]
     ];
     return performance;
+  }
+
+  function getReservations() {
+    return [{date: new Date(2016, 08, 16), time: new Date(2016, 08, 16, 10, 10)}];
   }
 
   function getMarkers() {
