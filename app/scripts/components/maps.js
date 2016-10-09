@@ -8,17 +8,14 @@ angular.
       controllerAs: 'mapsCtrl'
     });
 
-function mapsController($mdDialog) {
+function mapsController($mdDialog, stubData) {
   var vm = this;
 
   //sopra location
-  vm.center = { latitude: 45.760351, longitude: 3.134832 };
-  vm.zoom = 18
-  vm.options = {'disableDefaultUI': true};
+  vm.map = stubData.getMapInit();
+  vm.map.options = {'disableDefaultUI': true};
 
-  vm.markers= [];
-  vm.markers.push(createMarker(1, "sopra", 45.760351, 3.134832, 4, 5));
-  vm.markers.push(createMarker(1, "test", 45.760328, 3.135598, 0, 5));
+  vm.markers= stubData.getMarkers();
 
   vm.showAlert = function(event, marker) {
     vm.selectedMarker = marker;
@@ -29,24 +26,6 @@ function mapsController($mdDialog) {
       targetEvent: event,
       clickOutsideToClose:true
     })
-  }
-
-  function createMarker(id, title, latitude, longitude, available, nbPlaces) {
-    var icon = 'images/components/maps/';
-    icon += (available > 0)?'green_':'red_';
-    icon += (available == nbPlaces)?'red':'green';
-    icon += '.png';
-
-    return {
-      'id': id,
-      'title': title,
-      'available': available,
-      'nbPlaces': nbPlaces,
-      'coords': { 'latitude': latitude, 'longitude': longitude },
-      'options': {
-        'icon': icon
-      }
-    };
   }
 
   function MapsModalController($scope, $mdDialog) {
@@ -65,7 +44,7 @@ function mapsController($mdDialog) {
 
   vm.selectedItemChange = function(item) {
     if(item !== undefined) {
-      vm.center = {'latitude': item.coords.latitude, 'longitude': item.coords.longitude};
+      vm.map.center = {'latitude': item.coords.latitude, 'longitude': item.coords.longitude};
     }
   }
 }
