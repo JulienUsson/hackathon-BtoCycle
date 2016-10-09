@@ -26,7 +26,7 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
         template: '<home></home>'
       }
     }
-  }
+  };
 
   var mapsState = {
     name: 'maps',
@@ -39,7 +39,7 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
         template: '<maps></maps>'
       }
     }
-  }
+  };
 
   var scoreState = {
     name: 'score',
@@ -52,7 +52,7 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
         template: '<score></score>'
       }
     }
-  }
+  };
 
   var unlockState = {
     name: 'unlock',
@@ -65,7 +65,7 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
         template: '<unlock></unlock>'
       }
     }
-  }
+  };
 
   var bookState = {
     name: 'book',
@@ -78,7 +78,7 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
         template: '<book></book>'
       }
     }
-  }
+  };
 
   var partnerState = {
     name: 'partner',
@@ -91,7 +91,7 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
         template: '<partner></partner>'
       }
     }
-  }
+  };
 
   var newsState = {
     name: 'news',
@@ -104,7 +104,7 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
         template: '<news></news>'
       }
     }
-  }
+  };
 
   $stateProvider.state(splashScreenState);
   $stateProvider.state(homeState);

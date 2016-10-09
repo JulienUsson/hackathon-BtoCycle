@@ -30,7 +30,7 @@ angular.module('hackathonApp').config(
   }]
 );
 
-angular.module('hackathonApp').config(function ($mdThemingProvider, $mdIconProvider) {
+angular.module('hackathonApp').config(function ($mdThemingProvider) {
     $mdThemingProvider.theme('default')
       .primaryPalette('green')
       .accentPalette('yellow')
