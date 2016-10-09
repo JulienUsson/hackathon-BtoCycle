@@ -2,20 +2,20 @@
   <md-card-title md-colors="::{backgroundColor: 'default-primary-300'}">
     <md-card-title-media>
       <div class="md-media-sm card-media  margin-right" layout>
-        <img src="{{homeCtrl.avatar}}" class="img-circle"/>
+        <img src="{{homeCtrl.user.avatar}}" class="img-circle"/>
       </div>
     </md-card-title-media>
     <md-card-title-text>
-        <span class="md-headline">{{homeCtrl.username}}</span>
-        <span class="md-subhead description">{{homeCtrl.company}}</span>
+        <span class="md-headline">{{homeCtrl.user.username}}</span>
+        <span class="md-subhead description">{{homeCtrl.user.company}}</span>
     </md-card-title-text>
   </md-card-title>
 <md-card-title>
     <span class="md-headline">Objectif du mois</span>
     <span flex></span>
-    <span class="md-headline">{{homeCtrl.score}}</span> pts
+    <span class="md-headline">{{homeCtrl.user.score}}</span> pts
 </md-card-title>
-<objectif-bar value="homeCtrl.objectif"></objectif-bar>
+<objectif-bar value="homeCtrl.user.objectif"></objectif-bar>
 </md-card>
 <br>
 

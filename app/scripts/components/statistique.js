@@ -8,12 +8,10 @@ module('hackathonApp').
     controllerAs: 'statistiqueCtrl'
   });
 
-function statistiqueController() {
+function statistiqueController(stubData) {
   var vm = this;
 
-  vm.username = 'Mathilde Dupont';
-  vm.company = 'Sopra Steria';
-  vm.avatar = 'images/components/score/avatar.png';
+  vm.user = stubData.getUser();
 
   vm.todayKms = 0.5;
   vm.kms = 5.5;
