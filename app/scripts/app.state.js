@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvider) {
 
   var splashScreenState = {
@@ -11,7 +13,7 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
         template: '<splash-screen></splash-screen>'
       }
     }
-  }
+  };
 
   var homeState = {
     name: 'home',

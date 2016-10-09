@@ -1,18 +1,6 @@
 'use strict';
 
 angular.module('hackathonApp').factory('stubData', function() {
-  var service = {
-    'getUser': getUser,
-    'getPartners': getPartners,
-    'getMapInit': getMapInit,
-    'getMarkers': getMarkers,
-    'getNews': getNews,
-    'getObjectifChart': getObjectifChart,
-    'getPerformanceChart': getPerformanceChart,
-    'getReservations': getReservations
-  }
-  return service;
-
   function getUser() {
     return {
       'username': 'Mathilde Dupont',
@@ -103,4 +91,16 @@ angular.module('hackathonApp').factory('stubData', function() {
       }
     };
   }
+  
+    var service = {
+    'getUser': getUser,
+    'getPartners': getPartners,
+    'getMapInit': getMapInit,
+    'getMarkers': getMarkers,
+    'getNews': getNews,
+    'getObjectifChart': getObjectifChart,
+    'getPerformanceChart': getPerformanceChart,
+    'getReservations': getReservations
+  };
+  return service;
 });
