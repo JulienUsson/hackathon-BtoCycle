@@ -91,6 +91,19 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
     }
   }
 
+  var newsState = {
+    name: 'news',
+    url: '/news',
+    views: {
+      'header': {
+        template: '<app-menu></app-menu>'
+      },
+      'container': {
+        template: '<news></news>'
+      }
+    }
+  }
+
   $stateProvider.state(splashScreenState);
   $stateProvider.state(homeState);
   $stateProvider.state(mapsState);
@@ -98,5 +111,6 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
   $stateProvider.state(unlockState);
   $stateProvider.state(bookState);
   $stateProvider.state(partnerState);
+  $stateProvider.state(newsState);
   $urlRouterProvider.otherwise('/');
 });
