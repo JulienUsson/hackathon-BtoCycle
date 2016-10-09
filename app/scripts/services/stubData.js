@@ -34,9 +34,13 @@ angular.module('hackathonApp').factory('stubData', function() {
 
   function getNews() {
     return [
-      {'title': 'titre', 'content': 'contenu', 'liked': false},
-      {'title': 'titre', 'content': 'contenu', 'liked': true},
-      {'title': 'titre', 'content': 'contenu', 'liked': false}
+      {'title': 'Challenge du mois', 'content': 'Lot variable dans l\'esprit \'Green\'' , 'liked': false},
+      {'title': 'Récompense personnelle', 'content': 'Une place de cinéma', 'liked': false},
+      {'title': 'Récompense service', 'content': 'Une plante pour son open-space', 'liked': true},
+      {'title': 'Récompense entreprise', 'content': 'Rétribution financière pour l\'achat d\'un bien ou d\'un service à vocation écologique', 'liked': false},
+      {'title': 'Sopra Steria Group organise son premier week-end InAuvergne', 'content': 'Étudiants ingénieurs et étudiants consultants collaborent ce week-end ensemble pour imaginer la mobilité verte de demain.', 'liked': true},
+      {'title': 'Le tweet du jour de BtoCycle', 'content': 'BtoCycle : Parlez-en à vos collègues !', 'liked': false},
+
     ];
   }
 
