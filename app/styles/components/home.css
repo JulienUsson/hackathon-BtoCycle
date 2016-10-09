@@ -1,7 +1,8 @@
 
 .md-button {
   display:block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+  margin: 20px auto;
+  width: 95%;
+  height: 40px;
+  line-height: 40px;
 }
