@@ -11,7 +11,6 @@ angular.
 function mapsController($mdDialog, stubData) {
   var vm = this;
 
-  //sopra location
   vm.map = stubData.getMapInit();
   vm.map.options = {'disableDefaultUI': true};
 

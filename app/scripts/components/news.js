@@ -8,14 +8,10 @@ module('hackathonApp').
     controllerAs: 'newsCtrl'
   });
 
-function newsController() {
+function newsController(stubData) {
   var vm = this;
 
-  vm.news = [
-    {'title': 'titre', 'content': 'contenu', 'liked': false},
-    {'title': 'titre', 'content': 'contenu', 'liked': true},
-    {'title': 'titre', 'content': 'contenu', 'liked': false}
-  ]
+  vm.news = stubData.getNews();
 
   vm.like = function(index) {
     vm.news[index].liked=!vm.news[index].liked;

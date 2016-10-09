@@ -3,7 +3,10 @@ angular.module('hackathonApp').factory('stubData', function() {
     'getUser': getUser,
     'getPartners': getPartners,
     'getMapInit': getMapInit,
-    'getMarkers': getMarkers
+    'getMarkers': getMarkers,
+    'getNews': getNews,
+    'getObjectifChart': getObjectifChart,
+    'getPerformanceChart': getPerformanceChart
   }
   return service;
 
@@ -14,7 +17,8 @@ angular.module('hackathonApp').factory('stubData', function() {
       'avatar': 'images/components/score/avatar.png',
       'score': 500,
       'kms': 5,
-      'objectif': 25
+      'objectif': 25,
+      'todayKms': 0.1
     };
   }
 
@@ -27,11 +31,38 @@ angular.module('hackathonApp').factory('stubData', function() {
     ];
   }
 
+  function getNews() {
+    return [
+      {'title': 'titre', 'content': 'contenu', 'liked': false},
+      {'title': 'titre', 'content': 'contenu', 'liked': true},
+      {'title': 'titre', 'content': 'contenu', 'liked': false}
+    ];
+  }
+
   function getMapInit() {
     return {
       'center': { latitude: 45.760351, longitude: 3.134832 },
       'zoom': 18
     };
+  }
+
+  function getObjectifChart() {
+    var objectif = [];
+    objectif.labels = ["Objectif à ateindre", "Objectif"];
+    objectif.data = [10, 90];
+    objectif.colors = ['#388e3c', '#bdc3c7'];
+    return objectif;
+  }
+
+  function getPerformanceChart() {
+    var performance = [];
+    performance.labels = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+    performance.series = ['Mes performances', 'Performances moyennes'];
+    performance.data = [
+      [0.3, 0.5, 0.7, 0.2, 0.1, 0, 0],
+      [0.5, 0.7, 0.9, 0.7, 0.6, 0.5, 0.4]
+    ];
+    return performance;
   }
 
   function getMarkers() {
