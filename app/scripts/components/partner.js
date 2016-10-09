@@ -10,4 +10,5 @@ module('hackathonApp').
 
 function partnerController() {
   var vm = this;
+
 }
