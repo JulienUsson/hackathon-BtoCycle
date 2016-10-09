@@ -1,5 +1,5 @@
 <md-card >
-  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">
+  <md-card-title md-colors="::{backgroundColor: 'default-primary-300'}">
     <md-card-title-media>
       <div class="md-media-sm card-media  margin-right" layout>
         <img src="{{statistiqueCtrl.avatar}}" class="img-circle"/>
@@ -21,7 +21,7 @@
 </md-card>
 
 <md-card >
-  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">Objectif du mois</md-card-title>
+  <md-card-title md-colors="::{backgroundColor: 'red-700'}">Objectif du mois</md-card-title>
   <md-card-content>
     <canvas id="doughnut" class="chart chart-doughnut"
       chart-data="statistiqueCtrl.objectif.data" chart-labels="statistiqueCtrl.objectif.labels" chart-colors="statistiqueCtrl.objectif.colors">
@@ -31,7 +31,7 @@
 </md-card>
 
 <md-card >
-  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">Performance sur la semaine</md-card-title>
+  <md-card-title md-colors="::{backgroundColor: 'blue-700'}">Performance sur la semaine</md-card-title>
   <md-card-content>
     <canvas id="bar" style="padding-top: 20px;" class="chart chart-bar"
       chart-data="statistiqueCtrl.performance.data" chart-labels="statistiqueCtrl.performance.labels" chart-series="statistiqueCtrl.performance.series">
