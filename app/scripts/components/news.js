@@ -10,4 +10,14 @@ module('hackathonApp').
 
 function newsController() {
   var vm = this;
+
+  vm.news = [
+    {'title': 'titre', 'content': 'contenu', 'liked': false},
+    {'title': 'titre', 'content': 'contenu', 'liked': true},
+    {'title': 'titre', 'content': 'contenu', 'liked': false}
+  ]
+
+  vm.like = function(index) {
+    vm.news[index].liked=!vm.news[index].liked;
+  }
 }
