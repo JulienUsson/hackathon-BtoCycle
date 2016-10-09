@@ -78,11 +78,25 @@ angular.module('hackathonApp').config(function($urlRouterProvider, $stateProvide
     }
   }
 
+  var partnerState = {
+    name: 'partner',
+    url: '/partner',
+    views: {
+      'header': {
+        template: '<app-menu></app-menu>'
+      },
+      'container': {
+        template: '<partner></partner>'
+      }
+    }
+  }
+
   $stateProvider.state(splashScreenState);
   $stateProvider.state(homeState);
   $stateProvider.state(mapsState);
   $stateProvider.state(scoreState);
   $stateProvider.state(unlockState);
   $stateProvider.state(bookState);
+  $stateProvider.state(partnerState);
   $urlRouterProvider.otherwise('/');
 });
