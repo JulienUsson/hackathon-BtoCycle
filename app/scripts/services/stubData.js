@@ -14,7 +14,7 @@ angular.module('hackathonApp').factory('stubData', function() {
   function getUser() {
     return {
       'username': 'Mathilde Dupont',
-      'company': 'Sopra Steria',
+      'company': 'Michelin',
       'avatar': 'images/components/score/avatar.jpg',
       'score': 500,
       'kms': 5,
@@ -77,8 +77,10 @@ angular.module('hackathonApp').factory('stubData', function() {
 
   function getMarkers() {
     var markers= [];
-    markers.push(createMarker(1, "sopra", 45.760351, 3.134832, 4, 5));
-    markers.push(createMarker(1, "test", 45.760328, 3.135598, 0, 5));
+    markers.push(createMarker(1, "L\'Aventure Michelin", 45.790447, 3.106100, 4, 5));
+    markers.push(createMarker(2, "Cataroux", 45.791435, 3.103107, 0, 5));
+    markers.push(createMarker(3, "The Oval", 45.788255, 3.106981, 5, 5));
+    markers.push(createMarker(4, "SOS Médecin", 45.786048, 3.101584, 1, 2));
     return markers;
   }
 
