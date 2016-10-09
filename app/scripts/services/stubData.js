@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('hackathonApp').factory('stubData', function() {
   var service = {
     'getUser': getUser,
