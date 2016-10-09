@@ -14,15 +14,16 @@ function bookController($mdToast, stubData) {
   vm.minDate = new Date();
 
   vm.reservations = stubData.getReservations();
+  vm.stations = stubData.getMarkers();
 
   vm.book = function() {
     vm.validated = true;
     if(vm.date !== undefined && vm.time !== undefined) {
-      vm.reservations.push({date: vm.date, time: vm.time})
+      vm.reservations.push({date: vm.date, time: vm.time, station: vm.station.title})
       $mdToast.show(
         $mdToast.simple()
           .textContent('Réservation effectuée !')
-          .hideDelay(3000)
+          .hideDelay(500)
       );
     }
   }

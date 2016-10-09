@@ -67,7 +67,7 @@ angular.module('hackathonApp').factory('stubData', function() {
   }
 
   function getReservations() {
-    return [{date: new Date(2016, 08, 16), time: new Date(2016, 08, 16, 10, 10)}];
+    return [{date: new Date(2016, 08, 16), time: new Date(2016, 08, 16, 10, 10), station: 'Sopra'}];
   }
 
   function getMarkers() {
