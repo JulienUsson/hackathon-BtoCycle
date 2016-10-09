@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('hackathonApp').factory('stubData', function() {
   var service = {
     'getUser': getUser,
@@ -71,7 +73,7 @@ angular.module('hackathonApp').factory('stubData', function() {
   }
 
   function getReservations() {
-    var date = new Date(2016, 08, 16, 10, 10);
+    var date = new Date('2016', '08', '16', '10', '10');
     return [{'date': date, 'time': date, 'station': 'Sopra'}];
   }
 
