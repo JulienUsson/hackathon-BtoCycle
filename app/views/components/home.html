@@ -1,1 +1,47 @@
-coucou
+<md-card >
+  <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}">
+    <md-card-title-media>
+      <div class="md-media-sm card-media  margin-right" layout>
+        <img src="{{homeCtrl.avatar}}" class="img-circle"/>
+      </div>
+    </md-card-title-media>
+    <md-card-title-text>
+        <span class="md-headline">{{homeCtrl.username}}</span>
+        <span class="md-subhead description">{{homeCtrl.company}}</span>
+    </md-card-title-text>
+    <span><score-list-item label="'Score'" score="homeCtrl.kms * 1000" unit="
+      'pts'"></score-list-item></span>
+  </md-card-title>
+
+  <h2 class="md-title">Objectif du mois</h2>
+
+    <md-progress-linear md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-linear>
+
+</md-card>
+<br>
+
+
+<div>
+  <md-button class="md-raised" style="background-color:#1B5E20;">Mon profil</md-button>
+</div>
+<div>
+  <md-button class="md-raised" style="background-color:#2E7D32;">Carte des vélos</md-button>
+</div>
+<div>
+  <md-button class="md-raised" style="background-color:#388E3C;">Réserver mon vélo</md-button>
+</div>
+<div>
+  <md-button class="md-raised" style="background-color:#43A047;">Scores</md-button>
+</div>
+<div>
+  <md-button class="md-raised" style="background-color:#4CAF50;">Actualités et récompenses</md-button>
+</div>
+<div>
+  <md-button class="md-raised" style="background-color:#66BB6A;">Partenaires</md-button>
+</div>
+<div>
+  <md-button class="md-raised" style="background-color:#81C784;">Langues</md-button>
+</div>
+<div>
+  <md-button class="md-raised" style="background-color:#A5D6A7;">Paramètres</md-button>
+</div>

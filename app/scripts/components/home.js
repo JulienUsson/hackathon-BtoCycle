@@ -10,5 +10,11 @@ module('hackathonApp').
 
 function homeController() {
   var vm = this;
+  vm.username = 'Mathilde Dupont';
+  vm.company = 'Sopra Steria';
+  vm.avatar = 'images/components/score/avatar.png';
+  vm.kms = 5.5;
+
+
 
 }
