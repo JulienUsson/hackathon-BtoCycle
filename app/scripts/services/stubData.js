@@ -15,7 +15,7 @@ angular.module('hackathonApp').factory('stubData', function() {
     return {
       'username': 'Mathilde Dupont',
       'company': 'Sopra Steria',
-      'avatar': 'images/components/score/avatar.png',
+      'avatar': 'images/components/score/avatar.jpg',
       'score': 500,
       'kms': 5,
       'objectif': 25,
@@ -49,7 +49,7 @@ angular.module('hackathonApp').factory('stubData', function() {
 
   function getObjectifChart() {
     var objectif = [];
-    objectif.labels = ["Objectif à ateindre", "Objectif"];
+    objectif.labels = ["Objectif atteint", "Objectif à atteindre"];
     objectif.data = [10, 90];
     objectif.colors = ['#388e3c', '#bdc3c7'];
     return objectif;
