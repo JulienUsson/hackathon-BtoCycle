@@ -9,14 +9,13 @@
         <span class="md-headline">{{homeCtrl.username}}</span>
         <span class="md-subhead description">{{homeCtrl.company}}</span>
     </md-card-title-text>
-    <span><score-list-item label="'Score'" score="homeCtrl.kms * 1000" unit="
-      'pts'"></score-list-item></span>
   </md-card-title>
-
-  <h2 class="md-title">Objectif du mois</h2>
-
-    <md-progress-linear md-mode="determinate" value="{{vm.determinateValue}}"></md-progress-linear>
-
+<md-card-title>
+    <span class="md-headline">Objectif du mois</span>
+    <span flex></span>
+    <span class="md-headline">{{homeCtrl.score}}</span> pts
+</md-card-title>
+<objectif-bar value="homeCtrl.objectif"></objectif-bar>
 </md-card>
 <br>
 
