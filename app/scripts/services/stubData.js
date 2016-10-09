@@ -40,7 +40,7 @@ angular.module('hackathonApp').factory('stubData', function() {
       {'title': 'Récompense personnelle', 'content': 'Une place de cinéma', 'liked': false},
       {'title': 'Récompense service', 'content': 'Une plante pour son open-space', 'liked': true},
       {'title': 'Récompense entreprise', 'content': 'Rétribution financière pour l\'achat d\'un bien ou d\'un service à vocation écologique', 'liked': false},
-      {'title': 'Sopra Steria Group organise son premier week-end InAuvergne', 'content': 'Étudiants ingénieurs et étudiants consultants collaborent ce week-end ensemble pour imaginer la mobilité verte de demain.', 'liked': true},
+      {'title': 'Sopra Steria Group organise son premier week-end In\'Auvergne', 'content': 'Étudiants ingénieurs et étudiants consultants collaborent ce week-end ensemble pour imaginer la mobilité verte de demain.', 'liked': true},
       {'title': 'Le tweet du jour de BtoCycle', 'content': 'BtoCycle : Parlez-en à vos collègues !', 'liked': false},
 
     ];
@@ -48,8 +48,8 @@ angular.module('hackathonApp').factory('stubData', function() {
 
   function getMapInit() {
     return {
-      'center': { latitude: 45.760351, longitude: 3.134832 },
-      'zoom': 18
+      'center': { latitude: 45.791449, longitude: 3.103988 },
+      'zoom': 16
     };
   }
 
